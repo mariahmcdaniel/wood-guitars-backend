@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tone_woods",
+  "info": {
+    "singularName": "tone-wood",
+    "pluralName": "tone-woods",
+    "displayName": "Tonewood",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "tonewoods"
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "completed_projects",
+  "info": {
+    "singularName": "completed-project",
+    "pluralName": "completed-projects",
+    "displayName": "Completed Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "buildNumber": {
+      "type": "integer",
+      "unique": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sold": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "tonewoods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tone-wood.tone-wood",
+      "inversedBy": "completed_projects"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
