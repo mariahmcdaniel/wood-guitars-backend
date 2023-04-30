@@ -21,13 +21,10 @@
     },
     "images": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "sold": {
@@ -45,6 +42,9 @@
     },
     "date": {
       "type": "date"
+    },
+    "src": {
+      "type": "string"
     }
   }
 }
