@@ -46,12 +46,6 @@
     "src": {
       "type": "string"
     },
-    "woods": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::wood.wood",
-      "mappedBy": "completed_projects"
-    },
     "neck_wood": {
       "type": "relation",
       "relation": "manyToOne",
