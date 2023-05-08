@@ -85,6 +85,24 @@
       "relation": "manyToOne",
       "target": "api::perfling-material.perfling-material",
       "inversedBy": "projects"
+    },
+    "inlay_material": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::inlay-material.inlay-material",
+      "inversedBy": "projects"
+    },
+    "fret_wire_metal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fret-wire-metal.fret-wire-metal",
+      "inversedBy": "projects"
+    },
+    "end_wedge_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::end-wedge-wood.end-wedge-wood",
+      "inversedBy": "projects"
     }
   }
 }

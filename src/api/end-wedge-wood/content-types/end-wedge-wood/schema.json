@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "end_wedge_woods",
+  "info": {
+    "singularName": "end-wedge-wood",
+    "pluralName": "end-wedge-woods",
+    "displayName": "End Wedge Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "end_wedge_wood"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "end_wedge_wood"
+    }
+  }
+}
