@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sound_board_woods",
+  "info": {
+    "singularName": "sound-board-wood",
+    "pluralName": "sound-board-woods",
+    "displayName": "Sound Board Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "sound_board_wood"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "sound_board_wood"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

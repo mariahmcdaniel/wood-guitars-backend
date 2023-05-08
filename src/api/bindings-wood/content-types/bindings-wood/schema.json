@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bindings_woods",
+  "info": {
+    "singularName": "bindings-wood",
+    "pluralName": "bindings-woods",
+    "displayName": "Bindings Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "bindings_wood"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "bindings_wood"
+    }
+  }
+}

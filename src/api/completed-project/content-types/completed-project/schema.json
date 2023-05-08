@@ -75,6 +75,42 @@
       "relation": "manyToOne",
       "target": "api::headstock-veneer-secondary.headstock-veneer-secondary",
       "inversedBy": "completed_projects"
+    },
+    "headstock_veneer_back": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::headstock-veneer-back.headstock-veneer-back",
+      "inversedBy": "completed_projects"
+    },
+    "heel_cap_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::heel-cap-wood.heel-cap-wood",
+      "inversedBy": "completed_projects"
+    },
+    "sound_board_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sound-board-wood.sound-board-wood",
+      "inversedBy": "completed_projects"
+    },
+    "back_sides_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::back-sides-wood.back-sides-wood",
+      "inversedBy": "completed_projects"
+    },
+    "bindings_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bindings-wood.bindings-wood",
+      "inversedBy": "completed_projects"
+    },
+    "perfling_material": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::perfling-material.perfling-material",
+      "inversedBy": "completed_projects"
     }
   }
 }
