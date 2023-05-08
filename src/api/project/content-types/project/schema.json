@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "build_number": {
+      "type": "integer"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "fingerboard_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fingerboard-wood.fingerboard-wood",
+      "inversedBy": "projects"
+    },
+    "headstock_veneer_front": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::headstock-veneer-front.headstock-veneer-front",
+      "inversedBy": "projects"
+    },
+    "neck_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neck-wood.neck-wood",
+      "inversedBy": "projects"
+    },
+    "headstock_veneer_secondary": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::headstock-veneer-secondary.headstock-veneer-secondary",
+      "inversedBy": "projects"
+    }
+  }
+}

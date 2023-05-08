@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "neck_woods",
+  "collectionName": "headstock_veneer_secondaries",
   "info": {
-    "singularName": "neck-wood",
-    "pluralName": "neck-woods",
-    "displayName": "Neck Wood",
-    "description": ""
+    "singularName": "headstock-veneer-secondary",
+    "pluralName": "headstock-veneer-secondaries",
+    "displayName": "Headstock Veneer Secondary"
   },
   "options": {
     "draftAndPublish": true
@@ -20,28 +19,27 @@
       "type": "text"
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "completed_projects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::completed-project.completed-project",
-      "mappedBy": "neck_wood"
-    },
-    "in_stock": {
-      "type": "boolean",
-      "default": false
+      "mappedBy": "headstock_veneer_secondary"
     },
     "projects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project.project",
-      "mappedBy": "neck_wood"
+      "mappedBy": "headstock_veneer_secondary"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

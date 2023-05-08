@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "neck_woods",
+  "collectionName": "headstock_veneer_fronts",
   "info": {
-    "singularName": "neck-wood",
-    "pluralName": "neck-woods",
-    "displayName": "Neck Wood",
+    "singularName": "headstock-veneer-front",
+    "pluralName": "headstock-veneer-fronts",
+    "displayName": "Headstock Veneer Front",
     "description": ""
   },
   "options": {
@@ -19,29 +19,28 @@
     "description": {
       "type": "text"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "completed_projects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::completed-project.completed-project",
-      "mappedBy": "neck_wood"
-    },
-    "in_stock": {
-      "type": "boolean",
-      "default": false
+      "mappedBy": "headstock_veneer_front"
     },
     "projects": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project.project",
-      "mappedBy": "neck_wood"
+      "mappedBy": "headstock_veneer_front"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

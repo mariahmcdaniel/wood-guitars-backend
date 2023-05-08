@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fingerboard_woods",
+  "info": {
+    "singularName": "fingerboard-wood",
+    "pluralName": "fingerboard-woods",
+    "displayName": "Fingerboard Wood",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "fingerboard_wood"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "fingerboard_wood"
+    }
+  }
+}
