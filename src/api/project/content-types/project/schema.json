@@ -133,6 +133,30 @@
       "relation": "manyToOne",
       "target": "api::heel-block-wood.heel-block-wood",
       "inversedBy": "projects"
+    },
+    "kerfling_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kerfling-wood.kerfling-wood",
+      "inversedBy": "projects"
+    },
+    "truss_rod_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::truss-rod-type.truss-rod-type",
+      "inversedBy": "projects"
+    },
+    "neck_support_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neck-support-wood.neck-support-wood",
+      "inversedBy": "projects"
+    },
+    "bridge_pins_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bridge-pins-wood.bridge-pins-wood",
+      "inversedBy": "projects"
     }
   }
 }

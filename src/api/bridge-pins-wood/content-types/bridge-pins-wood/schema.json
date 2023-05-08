@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bridge_pins_woods",
+  "info": {
+    "singularName": "bridge-pins-wood",
+    "pluralName": "bridge-pins-woods",
+    "displayName": "Bridge Pins Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "bridge_pins_wood"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "bridge_pins_wood"
+    }
+  }
+}
