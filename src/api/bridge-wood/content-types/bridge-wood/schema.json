@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bridge_woods",
+  "info": {
+    "singularName": "bridge-wood",
+    "pluralName": "bridge-woods",
+    "displayName": "Bridge Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "bridge_wood"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "bridge_wood"
+    }
+  }
+}

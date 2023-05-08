@@ -103,6 +103,36 @@
       "relation": "manyToOne",
       "target": "api::end-wedge-wood.end-wedge-wood",
       "inversedBy": "projects"
+    },
+    "bridge_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bridge-wood.bridge-wood",
+      "inversedBy": "projects"
+    },
+    "bridge_plate_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bridge-plate-wood.bridge-plate-wood",
+      "inversedBy": "projects"
+    },
+    "brace_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brace-wood.brace-wood",
+      "inversedBy": "projects"
+    },
+    "neck_block_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::neck-block-wood.neck-block-wood",
+      "inversedBy": "projects"
+    },
+    "heel_block_wood": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::heel-block-wood.heel-block-wood",
+      "inversedBy": "projects"
     }
   }
 }
