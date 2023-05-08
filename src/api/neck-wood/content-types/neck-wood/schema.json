@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "neck_woods",
+  "info": {
+    "singularName": "neck-wood",
+    "pluralName": "neck-woods",
+    "displayName": "Neck Wood"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "completed_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::completed-project.completed-project",
+      "mappedBy": "neck_wood"
+    }
+  }
+}
