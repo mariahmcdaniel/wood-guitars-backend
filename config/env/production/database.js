@@ -29,7 +29,7 @@ if (process.env.JAWSDB_URL) {
 } else {
   var connection = mysql.createConnection({
     host: env('JAWSDB_HOST', 'localhost'),
-    port: env.int('DATABASE_PORT', 3306),
+    port: env.int('JAWSDB_PORT', 3306),
     user: env('JAWSDB_USERNAME', 'strapi'),
     dialect: 'mysql',
     password: env("JAWSDB_PASSWORD", "strapi"),
