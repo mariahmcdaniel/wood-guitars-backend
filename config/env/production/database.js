@@ -33,7 +33,7 @@ if (process.env.JAWSDB_URL) {
     user: env('JAWSDB_USERNAME', 'strapi'),
     dialect: 'mysql',
     password: env("JAWSDB_PASSWORD", "strapi"),
-    database: env('DATABASE_NAME', 'strapi'),
+    database: env('JAWSDB_DATABASE', 'strapi'),
   });
 }
 
