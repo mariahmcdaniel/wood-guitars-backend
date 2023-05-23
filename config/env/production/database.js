@@ -32,7 +32,7 @@ if (process.env.JAWSDB_URL) {
     port: env.int('DATABASE_PORT', 3306),
     user: env('JAWSDB_USERNAME', 'strapi'),
     dialect: 'mysql',
-    password: env("DATABASE_PASSWORD", "strapi"),
+    password: env("JAWSDB_PASSWORD", "strapi"),
     database: env('DATABASE_NAME', 'strapi'),
   });
 }
