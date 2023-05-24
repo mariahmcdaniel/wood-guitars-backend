@@ -34,6 +34,9 @@ if (process.env.JAWSDB_URL) {
     dialect: 'mysql',
     password: env("JAWSDB_PASSWORD", "strapi"),
     database: env('JAWSDB_DATABASE', 'strapi'),
+    ssl: {
+      rejectUnauthorized: false
+    },
   });
 }
 
