@@ -1,3 +1,4 @@
+
 module.exports = ({ env }) => ({
   upload: {
     config: {
@@ -23,5 +24,10 @@ module.exports = ({ env }) => ({
          tracing: false,
          },
        },
-    }, 
+    },
+  'users-permissions': {
+    config: {
+      jwtSecret: env('JWT_SECRET'),
+    }
+  }   
 });
