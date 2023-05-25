@@ -12,7 +12,7 @@
 
 module.exports = ({ env }) => ({
   host: env("HOST", "0.0.0.0"),
-  port: env.int("PORT", 1337),
+  port: process.env.PORT || env.int('PORT'),
   url: env("MY_HEROKU_URL", "https://eric-wood-guitars-backend.herokuapp.com/"),
   proxy: true,
   app: {
